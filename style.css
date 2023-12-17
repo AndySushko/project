@@ -2,14 +2,29 @@
 {
     margin: 0;
     padding: 0;
-    font-family: "Monserat";
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+.container {
+    padding: 0 10px;
+    margin: 0 auto;
+}
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+h3 {
+    font-size: 16px;
 }
 #main__section
 {
     text-align: center;
     padding-top: 50px;
 }
-
+.center_block_title {
+    text-align: center;
+    margin-bottom: 20px;
+}
 .main__title
 {
     font-size: 22px;
@@ -421,7 +436,7 @@ nav
     left: 0;
     width: 13px;
     height: 10px;
-    background: url(/img/checked.svg) no-repeat center;
+    background: url(img/checked.svg) no-repeat center;
     background-size: contain;
 }
 
@@ -460,6 +475,205 @@ nav
 }
 
 
+/*---by Andy-*/
+
+#team {
+    margin-top: 110px;
+}
+.team_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+}
+.team__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    margin: 10px auto;
+}
+.team__item-wrapper {
+    width: 50%;
+    padding: 0 15px;
+}
+.team__item-name h3 {
+    margin: 10px 0;
+}
+.team__item {
+    margin-bottom: 20px;
+}
+.team__item-avatar {
+    width: 100%;
+}
+.team__item-decr {
+    font-size: 12px;
+    font-weight: 500;
+    color: #505570;
+}
+.team__btn
+{
+    display: block;
+    background: none;
+    border: 1px solid #C3C5C2;
+    border-radius: 5px;
+    margin: 0 auto 110px auto;
+    padding: 8px 25px;
+    cursor: pointer;
+}
+.team__btn-link
+{
+    color:#000;
+    text-decoration: none;
+}
+
+
+
+
+.cases_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.case_item_wrapper {
+    width: 100%;
+    padding: 10px;
+}
+.case_item {
+    min-height: 220px;
+    border-radius: 5px;
+    position:relative;
+}
+.case_img {
+    width: 100%;
+    border-radius: 5px;
+}
+.case-fon {
+    height: 120px;
+    width: 100%;
+    border-radius: 5px;
+}
+.case_text, .bottom_case_text {
+    padding: 0 15px;
+}
+.bottom_case_text {
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 10px;
+}
+.white_clr {
+    color: white;
+}
+
+#case_01 {
+    background: url('img/case01.png');
+    background-size: cover;
+}
+#case_02 {
+    background: url('img/case04.jpeg');
+    background-size: cover;
+}
+#case_03 {
+    background: url('img/case05.png');
+    background-size: cover;
+}
+#case_04 {
+    background: url('img/case02.png');
+    background-size: cover;
+}
+#case_04 {
+    background: url('img/case02.png');
+    background-size: cover;
+}
+#case_05 {
+    background: url('img/case01.png');
+    background-size: cover;
+}
+
+.case_title {
+    font-size: 14px;
+    margin-top: 30px;
+}
+.case_date, .white_case_date {
+    color: #050c33;
+    opacity: .5;
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 400;
+}
+.white_case_date {
+    color: #fff;
+    opacity: .5;
+}
+.case_description {
+    color: #4e5a73;
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+
+
+.reviews_wrapper {
+    margin-bottom: 80px;
+}
+.review_block {
+    display: flex;
+    padding: 15px;
+    border: 1px solid rgba(0,0,0,.1);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 60px rgba(162,162,162,.25);
+    border-radius: 5px;
+}
+.review_scroll_block, .review_body_block {
+    width: 100%;
+    float: none;
+    display: block;
+    padding: 20px 15px;
+    border: none;
+}
+
+.review_scroll_block {
+    text-align: center;
+    border-top: 1px solid #cdcdcd;
+}
+.review_text {
+    padding-bottom: 20px;
+}
+.review_author_name {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #838b9c;
+}
+
+
+
+.work_with_us-text {
+    width: 740px;
+    max-width: 100%;
+    padding: 0 15px;
+    margin: auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.37;
+    color: #505570;
+    margin-bottom: 20px;
+}
+
+
+
+.faq_text {
+    /*???*/
+    counter-reset: questions__item;
+}
+
+
+/*---by Andy-*/
+
+
+
+/*--------media----------*/
 
 @media (min-width: 510px)
 {
@@ -503,6 +717,25 @@ nav
     {
         width: 600px;
         margin: 0 auto;
+    }
+    .case_item {
+        min-height: 360px;
+    }
+    .case_item_wrapper {
+        width: 33.333%;
+    }
+    .case_title {
+        font-size: 18px;
+    }
+    .case_description {
+        font-size: 14px;
+    }    
+    .case_description a {
+        color: #75B4E0;
+        text-decoration: none;
+    }
+    #big_case {
+        width: 66.666%!important;
     }
 }
 @media (min-width: 679px)
@@ -554,12 +787,26 @@ nav
         -moz-box-shadow: 0px 0px 40px 6px rgba(34, 60, 80, 0.2);
         box-shadow: 0px 0px 40px 6px rgba(34, 60, 80, 0.2);
     }
-    .team__wrapper
+    .team__item-wrapper {
+        width: 33.333%;
+        padding: 0 35px;
+    }
+    .team__item-decr {
+        font-size: 16px;
+    }
+    .team__item-name h3 {
+        margin: 15px 0;
+    }
+    .team__item {
+        margin-bottom: 60px;
+    }
+    .center_block_title {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+    .team__btn
     {
-        display: flex;
-        flex-wrap:wrap;
-        
-        text-align: left;
+        padding: 20px 60px;
     }
 
     .support
@@ -761,13 +1008,13 @@ nav
 
 
 @font-face {
-    font-family: "Monserat"; 
+    font-family: "Montserrat"; 
     src: url("/fonts/Montserrat-Medium.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
   } 
   @font-face {
-    font-family: "Monserat"; 
+    font-family: "Montserrat"; 
     src: url("/fonts/Montserrat-Bold.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: bold; 
