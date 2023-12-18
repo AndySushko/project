@@ -10,7 +10,7 @@ let texts = [
     
 ]
 
-console.log(texts[0]);
+
 
 let i = 0;
 function showComment(k)
