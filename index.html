@@ -122,7 +122,7 @@
             <h2 class="adv__title" >13  лет совершенствуем <br>компетенции в Drupal <br>поддержке!</h2>
             <div class="adv__subtitle">Разрабатываем и оптимизируем модули,<br> расширяем <br>функциональность сайтов, обновляем дизайн</div>
 
-            <div class="adv__wrapper">
+            <div class="advv__wrapper">
                 <div class="adv__item">
                     <div class="drupal__logo">
                         <img src="img/druapl.svg" alt="#" class="drupal">
@@ -535,28 +535,31 @@
 
             <div class="review_block">
                 <div class="review_body_block">
-                    <div class="review_logo">
-                        <img src="img/logo_0.png" alt="#" class="logo_0">
-                    </div>
+                    
                     <div class="review_text">
-                        <h4 class="case_title">Долгие поиски единственного и неповторимого мастера на многострадальный сайт&nbsp;www.cielparfum.com, который был собран крайне некомпетентным программистом и раз в месяц стабильно грозил погибнуть, привели меня на сайт и, в итоге, к ребятам из Drupal-coder. И вот уже практически полгода как не проходит и дня, чтобы я не поудивлялась и не порадовалась своему везению! Починили все, что не работало - от поиска до отображения меню. Провели редизайн - не отходя от желаемого, но со своими существенными и качественными дополнениями. Осуществили ряд проектов - конкурсы, тесты и тд. А уж мелких починок и доработок - не счесть! И главное - все качественно и быстро (не взирая на не самый "быстрый" тариф). Есть вопросы - замечательный Алексей всегда подскажет, поддержит, отремонтирует и/или просто сделает с нуля. Есть задумка для реализации - замечательный Сергей обсудит и предложит идеальный вариант. Есть проблема - замечательные Надежда и Роман починят, поправят, сделают! Ребята доказали, что эта CMS - мощная и грамотная система управления. Надеюсь, что наше сотрудничество затянется надолго! Спасибо!!!</p>
+                        <div class="review_logo">
+                            <img src="img/logo_0.png" alt="#" class="logo_0">
+                        </div>
+                        <h4 id="comment" class="case_title">Долгие поиски единственного и неповторимого мастера на многострадальный сайт&nbsp;www.cielparfum.com, который был собран крайне некомпетентным программистом и раз в месяц стабильно грозил погибнуть, привели меня на сайт и, в итоге, к ребятам из Drupal-coder. И вот уже практически полгода как не проходит и дня, чтобы я не поудивлялась и не порадовалась своему везению! Починили все, что не работало - от поиска до отображения меню. Провели редизайн - не отходя от желаемого, но со своими существенными и качественными дополнениями. Осуществили ряд проектов - конкурсы, тесты и тд. А уж мелких починок и доработок - не счесть! И главное - все качественно и быстро (не взирая на не самый "быстрый" тариф). Есть вопросы - замечательный Алексей всегда подскажет, поддержит, отремонтирует и/или просто сделает с нуля. Есть задумка для реализации - замечательный Сергей обсудит и предложит идеальный вариант. Есть проблема - замечательные Надежда и Роман починят, поправят, сделают! Ребята доказали, что эта CMS - мощная и грамотная система управления. Надеюсь, что наше сотрудничество затянется надолго! Спасибо!!!</p>
                         </h4>
-                        <div class="review_author_name">
+                        <div  class="review_author_name">
                             С уважением, Наталья Сушкова руководитель Отдела веб-проектов Группы компаний «Си Эль парфюм»&nbsp;
                             <a href="#">http://www.cielparfum.com/</a>
                         </div>
-                </div>
-                <div class="review_scroll_block">
-                    <div class="review_scroll">
-                        <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" style="">Previous</button>
-                        <span class="slick-slide-num"><span class="slick-slide-num-current">01</span> / 08</span>
-                        <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" style="">Next</button>
+                    </div>
+                    <div class="review_scroll_block">
+                        <div class="review_scroll">
+                            <button type="button" id="slider__prev" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" >Previous</button>
+                            <span class="slick-slide-num"><span id="slider__position" class="slick-slide-num-current">01</span> / 08</span>
+                            <button type="button" data-role="none" id="slider__next" class="slick-next slick-arrow" aria-label="Next" >Next</button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
+
 
 
 
@@ -686,5 +689,6 @@
     </footer>
 
     <script src="main.js"></script>
+    <script src="slider.js"></script>
 </body>
 </html>
