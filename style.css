@@ -25,6 +25,16 @@ h3 {
     padding-top: 50px;
 
 }
+.expertise__container
+{
+    margin-left: 30px;
+}
+
+#slider2
+{
+    width: 100vw;
+    overflow: hidden;
+}
 
 .main__block
 {

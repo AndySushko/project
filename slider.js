@@ -21,25 +21,25 @@ function showComment(k)
 
 
 
-document.getElementById("slider__next").onclick = function() 
+document.getElementById("slider1__next").onclick = function() 
 {
     
     i++;
     if(i <8) {}
     else i= 0;
-    document.getElementById("slider__position").innerHTML = "0" + parseInt(i + 1) ;
+    document.getElementById("slider1__position").innerHTML = "0" + parseInt(i + 1) ;
     
     showComment(i);
 }
 
-document.getElementById("slider__prev").onclick = function() 
+document.getElementById("slider1__prev").onclick = function() 
 {
     
     i--;
     if(i == -1) {
         i = 7;
     }
-    document.getElementById("slider__position").innerHTML = "0" + parseInt(i + 1) ;
+    document.getElementById("slider1__position").innerHTML = "0" + parseInt(i + 1) ;
     
     showComment(i);
 
