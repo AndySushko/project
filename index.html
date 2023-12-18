@@ -25,41 +25,69 @@
         
     </div>
 
+    <nav class="main__section-nav">
+        <img src="#" alt="#" class="logo">
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="hamburger"></div>
+            
+        </div>
+       
+    </nav>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#">ПОДДЕРЖКА DRUPAL</a></li>
+        <li><a href="#" id="admnstr">АДМИНИСТРИРОВАНИЕ</a></li>
+        <ul id="admnstr__list">
+            <li><a href="#">МИГРАЦИЯ</a></li>
+            <li><a href="#">БЭКАПЫ</a></li>
+            <li><a href="#">АЙДИТ БЕЗОПАСНОСТЬ</a></li>
+            <li><a href="#">ОПТИМИЗАЦИЯ СКОРОСТИ</a></li>
+            <li><a href="#">ПЕРЕЕЗД НА HTTPS</a></li>
+        </ul>
+        <li><a href="#">ПРОДВИЖЕНИЕ</a></li>
+        <li><a href="#">РЕКЛАМА</a></li>
+        <li><a href="#" id="aboutUs">О НАС</a></li>
+        <ul id="aboutUs__list">
+            <li><a href="#team">КОМАНДА</a></li>
+            <li><a href="#">DRUPALGIVE</a></li>
+            <li><a href="#">БЛОГ</a></li>
+            <li><a href="#">КУРСЫ DRUPAL</a></li>
+        </ul>
+        <li><a href="#">ПРОЕКТЫ</a></li>
+        <li><a href="#">КОНТАКТЫ</a></li>
 
+    </ul>
 
     <section id="main__section"  class="container">
 
-        <!-- <nav class="main__section-nav">
-            <img src="#" alt="#" class="logo">
-            <div class="hamburger-menu">
-                <div class="hamburger"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Блог</a></li>
-            </ul>
-        </nav> -->
+       
         <div class="container">
             <nav class="navigation">
                 <div class="logo">
                     <img src="img/main-logo.svg" alt="#">
                 </div>
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Поддержка сайтов</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Тарифы</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Наши работы</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Отзывы</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">ПОДДЕРЖКА DRUPAL</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" id="admnstr_desct">АДМИНИСТРИРОВАНИЕ</a>
+                    <ul id="admnstr__desct-list">
+                        <li><a href="#">МИГРАЦИЯ</a></li>
+                        <li><a href="#">БЭКАПЫ</a></li>
+                        <li><a href="#">АЙДИТ БЕЗОПАСНОСТЬ</a></li>
+                        <li><a href="#">ОПТИМИЗАЦИЯ СКОРОСТИ</a></li>
+                        <li><a href="#">ПЕРЕЕЗД НА HTTPS</a></li>
+                    </ul></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">ПРОДВИЖЕНИЕ</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">РЕКЛАМА</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link" id="aboutUs__desct">О НАС</a>
+                    <ul id="aboutUs__desct-list">
+                        <li><a href="#team">КОМАНДА</a></li>
+                        <li><a href="#">DRUPALGIVE</a></li>
+                        <li><a href="#">БЛОГ</a></li>
+                        <li><a href="#">КУРСЫ DRUPAL</a></li>
+                    </ul></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">ПРОЕКТЫ</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">КОНТАКТЫ</a></li>
+
                 </ul>
-                <div class="navigation__block-right">
-                    <div class="tel">8 800 222-26-73</div>
-                    <div class="language">
-                        <div class="language__value">RU</div>
-                        <img src="img/arrow-lang.svg" alt="#" class="language__img">
-                    </div>
-                </div>
             </nav>
         </div>
         
@@ -690,5 +718,6 @@
 
     <script src="main.js"></script>
     <script src="slider.js"></script>
+    <script src="nav.js"></script>
 </body>
 </html>
