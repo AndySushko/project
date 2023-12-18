@@ -99,7 +99,7 @@ h3 {
 }
 
 
-#adv
+.adv
 {
     margin-top: 70px;
     padding: 10px;
@@ -972,7 +972,7 @@ button
     }
     #myVideo
     {
-        width: 100%; 
+        width: 120%; 
         position: absolute;
         top: 0;
         left: 0;
