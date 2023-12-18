@@ -905,14 +905,10 @@ button
 }
 @media (min-width: 510px)
 {
-    /* .mask__area
+   .main__title
     {
-        height: 650px;
+        font-size: 42px;
     }
-    .mask 
-    {
-        height: 650px;
-    } */
 
     #main__section
     {
