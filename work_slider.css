@@ -13,8 +13,17 @@
   padding: 2%;
   position: relative;
   text-align: center;
+  /*height: 100px;*/
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
 }
 
 #center_02 {
   margin-right: 160px;
+}
+
+.work_slider_content img {
+  width: 100%;
 }

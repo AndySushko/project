@@ -696,6 +696,9 @@ box-shadow: 0px 0px 58px 0px rgba(34, 60, 80, 0.29);
 
 
 
+#cases {
+    margin-bottom: 60px;
+}
 .cases_wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -783,6 +786,9 @@ box-shadow: 0px 0px 58px 0px rgba(34, 60, 80, 0.29);
 
 
 
+#reviews {
+    margin-bottom: 60px;
+}
 .reviews_wrapper {
     margin-bottom: 80px;
 }
@@ -843,6 +849,11 @@ button
 }
 
 
+
+
+#faq {
+    margin-top: 60px;
+}
 .faq_wrapper {
     display: block;
     border: 3px solid transparent;
@@ -1015,6 +1026,9 @@ button
     }
     #big_case {
         width: 66.666%!important;
+    }
+    .work_with_us-text {
+        text-align: center;
     }
 }
 @media (min-width: 891px)
