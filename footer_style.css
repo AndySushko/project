@@ -340,7 +340,7 @@ footer input::-webkit-input-placeholder, footer textarea::-webkit-input-placehol
     top: 2px;
     width: 5px;
     height: 10px;
-    border: solid #000;
+    border: solid #e6640e;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
 }
@@ -354,31 +354,19 @@ footer input::-webkit-input-placeholder, footer textarea::-webkit-input-placehol
     border: none;
   }
   
-  /* Создать кастомный стиль для чекбокса */
   .form-checkbox + .checkmark {
     position: relative;
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: black; /* Цвет фона чекбокса */
+    background-color: black;
   }
   
-  /* Оранжевая галочка всегда будет видна */
-  .checkmark:after {
-    content: '\2713'; /* Знак галочки */
-    font-size: 16px;
-    color: orange; /* Цвет оранжевой галочки */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
   
-  /* При необходимости, можно добавить стили для наведения */
-  .form-checkbox:hover + .checkmark {
-    background-color: black; /* Оставить цвет фона чекбокса черным при наведении */
+  .form-checkbox + .checkmark {
+    background-color: rgb(0, 0, 0);
+    color: #f14d34;
   }
-
 
 
 
