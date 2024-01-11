@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="work_slider.css">
     <link rel="stylesheet" href="footer_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +19,80 @@
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- template for the modal component -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/x-template" id="modal-template">
+      <transition name="modal">
+        <div class="modal-mask">
+            <div class="modal-wrapper">
+                <div class="modal-container">
+                
+                        
+                        <div class="col-md-6 col-xs-12 col-sm-6">
+                        
+                            <div class="field field--name-field-block-with-form-value field--type-entity-reference field--label-hidden field--item">
+                                    <form id="contactForm" action="https://formcarry.com/s/e1f18sFE8Z" method="post" enctype="multipart/form-data" class="contact-message-order-support-form contact-message-form contact-form antibot popup_form" >
+                                        <!-- / <noscript>
+                                        <div class="antibot-no-js antibot-message antibot-message-warning">Вы должны включить JavaScript чтобы использовать эту форму.</div>
+                                        </noscript> -->
+                                        <button style="width:30px; height:30px; text-align: center; margin-bottom:20px;" class="modal-default-button" @click="$emit('close')">
+                                            X
+                                        </button>
+                                        <div class="field--type-string field--name-field-vashe-imya field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-vashe-imya-wrapper" id="edit-field-vashe-imya-wrapper">      
+                                            <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-vashe-imya-0-value js-form-item-field-vashe-imya-0-value form-group">
+                                            <!-- <label for="edit-field-vashe-imya-0-value" class="control-label">Ваше имя</label> -->
+                                        
+                                        
+                                            <input class="js-text-full text-full form-text form-control"  type="text" id="edit-field-vashe-imya-0-value" name="field_vashe_imya[0][value]" value="" size="60" maxlength="255" placeholder="Ваше имя">
+                                            </div>
+                                        </div>
+                                        <div class="field--type-string field--name-field-telefon field--widget-string-textfield form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-telefon-wrapper" id="edit-field-telefon-wrapper">      
+                                            <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-telefon-0-value js-form-item-field-telefon-0-value form-group">
+                                            <!-- <label for="edit-field-telefon-0-value" class="control-label js-form-required form-required">Телефон</label> -->
+                                            <input class="js-text-full text-full form-text required form-control" data-drupal-selector="edit-field-telefon-0-value" type="text" id="edit-field-telefon-0-value" name="field_telefon[0][value]" value="" size="60" maxlength="255" placeholder="Телефон" required="required" aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="field--type-email field--name-field-e-mail field--widget-email-default form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-e-mail-wrapper" id="edit-field-e-mail-wrapper">      
+                                            <div class="form-item js-form-item form-type-email js-form-type-email form-item-field-e-mail-0-value js-form-item-field-e-mail-0-value form-group">
+                                            <!-- <label for="edit-field-e-mail-0-value" class="control-label js-form-required form-required">E-mail</label> -->
+                                                <input data-drupal-selector="edit-field-e-mail-0-value" class="form-email required form-control" type="email" id="edit-field-e-mail-0-value" name="field_e_mail[0][value]" value="" size="60" maxlength="254" placeholder="E-mail" required="required" aria-required="true">
+                                            </div>
+                                        </div>
+                                        <div class="field--type-string-long field--name-field-vash- field--widget-string-textarea form-group js-form-wrapper form-wrapper" data-drupal-selector="edit-field-vash-wrapper" id="edit-field-vash-wrapper">      
+                                            <div class="form-item js-form-item form-type-textarea js-form-type-textarea form-item-field-vash--0-value js-form-item-field-vash--0-value form-group">
+                                                <!-- <label for="edit-field-vash-0-value" class="control-label">Ваш комментарий</label>-->
+                                                <div class="form-textarea-wrapper">
+                                                    <textarea class="js-text-full text-full form-textarea form-control resize-vertical" data-drupal-selector="edit-field-vash-0-value" id="edit-field-vash-0-value" name="field_vash_[0][value]" rows="5" cols="60" placeholder="Ваш комментарий">
+
+                                                    </textarea>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-item js-form-item form-type-checkbox js-form-type-checkbox form-item-fz152-agreement js-form-item-fz152-agreement checkbox">
+                                                <label for="edit-fz152-agreement" class="control-label option js-form-required form-required">
+                                                    <input required="required" data-drupal-selector="edit-fz152-agreement" class="form-checkbox required" type="checkbox" id="edit-fz152-agreement" name="fz152_agreement" value="1" aria-required="true">
+                                                    <span class="checkmark"></span>
+                                                    Отправляя заявку, я даю согласие на 
+                                                    <a href="/privacy-policy" target="_blank" rel="nofollow">обработку своих персональных данных</a>.
+                                                </label>
+                                            </div>
+                                            <div class="g-recaptcha" data-sitekey="6LdYxTcpAAAAANqoRNHO0sUQ2a5ImJboGl4Upd2B">
+                                            
+                                            </div>
+                                            <div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions">
+                                                <button  class="button button--primary js-form-submit form-submit btn-primary btn"  id="edit-submit" type="submit" value="Свяжитесь с нами">Свяжитесь с нами</button>
+                                            </div>
+                                        
+                                    </form>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+      </transition>
+    </script>
 </head>
 <body>
 
@@ -363,55 +436,73 @@
 
 
     <section id="tariff">
-        
-        <div class="tariff__background">
-            <img src="img/D-background.svg" alt="">
-        </div>
-        <div class="container">
-            <h2 class="center_block_title">Тарифы</h2>
-        <div class="tariff__wrapper">
-            <div class="tariff__item">
-                <div class="tariff__item-title">Стартовый</div>
-                <ul class="tariff__item-descr">
-                    <li class="tariff__item-descr-item">Консультации и работы по SEO</li>
-                    <li class="tariff__item-descr-item">Услуги дизайнера</li>
-                    <li class="tariff__item-descr-item">Неиспользованные оплаченные часы <br>переносятся на следующий месяц</li>
-                    <li class="tariff__item-descr-item">Предоплата от 6 000 рублей в месяц</li>
-                
-                </ul>
-                <button class="tariff__item-contact-btn">СВЯЖИТЕСЬ С НАМИ</button>
+        <div id="app">
+            <div class="tariff__background">
+                <img src="img/D-background.svg" alt="">
             </div>
-            <div class="tariff__item">
-                <div class="tariff__item-title">Бизнес</div>
-                <ul class="tariff__item-descr">
-                    <li class="tariff__item-descr-item">Консультации и работы по SEO</li>
-                    <li class="tariff__item-descr-item">Услуги дизайнера</li>
-                    <li class="tariff__item-descr-item">Выскокое время реакции - до 2 рабочих дней</li>
-                    <li class="tariff__item-descr-item">Неиспользованные оплаченные часы не<br>переносятся на следующий месяц</li>
-                    <li class="tariff__item-descr-item">Предоплата от 30 000 рублей в месяц</li>
-                </ul>
-                <button class="tariff__item-contact-btn">СВЯЖИТЕСЬ С НАМИ</button>
+            <div class="container">
+                <h2 class="center_block_title">Тарифы</h2>
+            <div class="tariff__wrapper">
+                <div class="tariff__item">
+                    <div class="tariff__item-title">Стартовый</div>
+                    <ul class="tariff__item-descr">
+                        <li class="tariff__item-descr-item">Консультации и работы по SEO</li>
+                        <li class="tariff__item-descr-item">Услуги дизайнера</li>
+                        <li class="tariff__item-descr-item">Неиспользованные оплаченные часы <br>переносятся на следующий месяц</li>
+                        <li class="tariff__item-descr-item">Предоплата от 6 000 рублей в месяц</li>
+                    
+                    </ul>
+                    <button class="tariff__item-contact-btn show-modal" @click="showModal = true" >СВЯЖИТЕСЬ С НАМИ</button>
+                </div>
+                <div class="tariff__item">
+                    <div class="tariff__item-title">Бизнес</div>
+                    <ul class="tariff__item-descr">
+                        <li class="tariff__item-descr-item">Консультации и работы по SEO</li>
+                        <li class="tariff__item-descr-item">Услуги дизайнера</li>
+                        <li class="tariff__item-descr-item">Выскокое время реакции - до 2 рабочих дней</li>
+                        <li class="tariff__item-descr-item">Неиспользованные оплаченные часы не<br>переносятся на следующий месяц</li>
+                        <li class="tariff__item-descr-item">Предоплата от 30 000 рублей в месяц</li>
+                    </ul>
+                    <button class="tariff__item-contact-btn show-modal" @click="showModal = true">СВЯЖИТЕСЬ С НАМИ</button>
+                </div>
+                <div class="tariff__item">
+                    <div class="tariff__item-title">VIP</div>
+                    <ul class="tariff__item-descr">
+                        <li class="tariff__item-descr-item">Консультации и работы по SEO</li>
+                        <li class="tariff__item-descr-item">Услуги дизайнера</li>
+                        <li class="tariff__item-descr-item">МАксимальлное время реакции - в день<br>обращения</li>
+                        <li class="tariff__item-descr-item">Неиспользованные оплаченные часы не<br>переносятся на следующий месяц</li>
+                        <li class="tariff__item-descr-item">Предоплата от 270 000 рублей в месяц</li>
+                    </ul>
+                    <button class="tariff__item-contact-btn show-modal" @click="showModal = true">СВЯЖИТЕСЬ С НАМИ</button>
+                </div>
             </div>
-            <div class="tariff__item">
-                <div class="tariff__item-title">VIP</div>
-                <ul class="tariff__item-descr">
-                    <li class="tariff__item-descr-item">Консультации и работы по SEO</li>
-                    <li class="tariff__item-descr-item">Услуги дизайнера</li>
-                    <li class="tariff__item-descr-item">МАксимальлное время реакции - в день<br>обращения</li>
-                    <li class="tariff__item-descr-item">Неиспользованные оплаченные часы не<br>переносятся на следующий месяц</li>
-                    <li class="tariff__item-descr-item">Предоплата от 270 000 рублей в месяц</li>
-                </ul>
-                <button class="tariff__item-contact-btn">СВЯЖИТЕСЬ С НАМИ</button>
-            </div>
-        </div>
-        <div class="tariff__footer">
-            <p>Вам не подходят наши тарифы? Оставьте заявку и мы <br>предложим вам индивидуальные условия!</p>
-            <a href="#">ПОЛУЧИТЬ ИНДИВИДУАЛЬНЫЙ ТАРИФ</a>
+            <div class="tariff__footer">
+                <p>Вам не подходят наши тарифы? Оставьте заявку и мы <br>предложим вам индивидуальные условия!</p>
+                <a href="#">ПОЛУЧИТЬ ИНДИВИДУАЛЬНЫЙ ТАРИФ</a>
 
+            </div>
+            
+            </div>
+            <modal v-if="showModal" @close="showModal = false">
+      
+               
+            </modal>
         </div>
-        
-        </div>
-        
+        <script>
+            // register modal component
+            Vue.component("modal", {
+              template: "#modal-template"
+            });
+      
+            // start app
+            new Vue({
+              el: "#app",
+              data: {
+                showModal: false
+              }
+            });
+          </script>
     </section>
     <section id="problems" class="container" >
         <h2 class="problems-title">Наши профессиональные разработчики <br>выполняют быстро любые задачи</h2>
@@ -787,7 +878,7 @@
                 <div class="footer_item">
                     <div class="col-md-6 col-xs-12 col-sm-6">
                     
-            <div class="field field--name-field-block-with-form-value field--type-entity-reference field--label-hidden field--item">
+                <div class="field field--name-field-block-with-form-value field--type-entity-reference field--label-hidden field--item">
                 <form id="contactForm" action="https://formcarry.com/s/e1f18sFE8Z" method="post" enctype="multipart/form-data" class="contact-message-order-support-form contact-message-form contact-form antibot" >
  <!-- / <noscript>
   <div class="antibot-no-js antibot-message antibot-message-warning">Вы должны включить JavaScript чтобы использовать эту форму.</div>
@@ -915,5 +1006,8 @@
             });
         }
     </script>
+    
+
+
 </body>
 </html>
