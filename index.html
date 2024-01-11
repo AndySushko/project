@@ -879,7 +879,7 @@
                     <div class="col-md-6 col-xs-12 col-sm-6">
                     
                 <div class="field field--name-field-block-with-form-value field--type-entity-reference field--label-hidden field--item">
-                <form id="contactForm" action="https://formcarry.com/s/e1f18sFE8Z" method="post" enctype="multipart/form-data" class="contact-message-order-support-form contact-message-form contact-form antibot" >
+                <form id="contactForm" action="https://formcarry.com/s/s8cbbHfYuV7" method="post" enctype="multipart/form-data" class="contact-message-order-support-form contact-message-form contact-form antibot" >
  <!-- / <noscript>
   <div class="antibot-no-js antibot-message antibot-message-warning">Вы должны включить JavaScript чтобы использовать эту форму.</div>
 </noscript> -->
@@ -992,14 +992,13 @@
             var form = document.getElementById("myForm");
             var formData = new FormData(form);
 
-            fetch("https://formcarry.com/s/e1f18sFE8Z", {
+            fetch("https://formcarry.com/s/s8cbbHfYuV7", {
                 method: "POST",
                 body: formData
             })
             .then(response => response.json())
             .then(data => {
-                console.log("Ответ от Formcarry:", data);
-                // Обработайте ответ, как вам нужно
+                console.log("Ответ от Formcarry:", data)
             })
             .catch(error => {
                 console.error("Ошибка при отправке формы:", error);
@@ -1007,7 +1006,6 @@
         }
     </script>
     
-
 
 </body>
 </html>
