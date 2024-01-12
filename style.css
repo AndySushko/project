@@ -1159,11 +1159,12 @@ button
     }
     .review_scroll_block {
     text-align: center;
-    border-right: none;
+    border-top: none;
     min-width: 190px;
     align-items: center;
     border-left: 1px solid #cdcdcd;
     margin-left: 20px;
+    display: flex;
     }
     .review_scroll {
         display: flex;
