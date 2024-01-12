@@ -37,6 +37,14 @@ h3 {
     width: 100vw;
     overflow: hidden;
 }
+.slider__btn-style
+{
+    width: 50px;
+    height: 25px;
+    background: none;
+    border-radius: 5px;
+    border-color: #d63b23;
+}
 
 .main__block
 {
