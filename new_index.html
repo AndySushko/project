@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/logo12.png" type="image/png">
+	<link rel="stylesheet" href="null.css">
+	<link rel="stylesheet" href="new_style.css">
+	<link rel="stylesheet" href="new_matrix_style.css">
+	<title>SuperMatrix</title>
+</head>
+<body>
+
+	<!-- Header -->
+	<div class="header">
+		<div class="container">
+			<div class="logotype"><img src="../img/logo001.png" alt="logotype" class="logo_img"></div>
+			<div class="navigation"></div>
+		</div>
+	</div>
+
+	<!-- Main_container -->
+	<div class="main_container">
+		<div class="container">
+			<div class="main_field">
+
+	    		<div class="text01">
+	    			<div class="xyz">
+	    				<h4 class="matrix_title">Enter matrix A</h4>
+	    			</div>
+	    			<span class="cross_symbol">×</span>
+	    		</div>
+
+	    		<!-- Матричное поле -->
+	    		<div class="a_test">
+	    			<div class="matrix_field" id="m_field">
+	    				<div class="matrix_row_field_basic" id="matrix_row_0">
+	    					<textarea class="matrix_elem basic" type="text" name="username" id="matrix_elem_0" autocomplete="off" placeholder='0'></textarea>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		
+	      	
+	    		<!--<p class="info_block test_test">'Space' - add matrix elem<br>
+	    																		'Enter' - add new row<br>
+	    																		'Ctrl + V' - paste copied matrix</p>-->
+
+	      		<div class="btn_field">
+	      			<!--<a href="#" class="btn add_matrix_elem">det</a>
+	      			<a href="#" class="btn">rang</a>
+	      			<a href="#" class="btn sum">trace</a>
+	      			<a href="#" class="btn"> <span>basis</span></a>
+	      			<a href="#" class="btn big">Gauss method</a>
+	      			<a href="#" class="btn big">Cramer's method</a>
+	      			<a href="#" class="btn middle">transpose</a>
+	      			<a href="#" class="btn middle">inverse</a>-->
+	      			<!-- Матрица алгебраических дополнений -->
+	      			<!--<a href="#" class="btn middle">diagonal</a>
+	      			<a href="#" class="btn last">characteristic polynomial</a>
+	      			<a href="#" class="btn copy last">copy</a>-->
+	      			<!--Матрица перехода, 
+	      				Характеристические уравнения и собственные векторы, 
+	      				Линейные оболочки,  -->
+	      				<!--<a href="#" class="matrix_btn">( )</a>
+	      				<a href="#" class="matrix_btn">></a>
+	      				<a href="#" class="matrix_btn">1</a>
+	      			<a href="#" class="matrix_btn">2</a>
+	      			<a href="#" class="matrix_btn">3</a>
+	      			<a href="#" class="matrix_btn"> // </a>
+	      			<a href="#" class="matrix_btn">( )</a>
+	      				<a href="#" class="matrix_btn">></a>
+	      			<a href="#" class="matrix_btn">4</a>
+	      			<a href="#" class="matrix_btn">5</a>
+	      			<a href="#" class="matrix_btn">6</a>
+	      			<a href="#" class="matrix_btn">7</a>-->
+	      		</div>
+
+    		</div>
+		</div>
+		<div class="work_space">
+      			<textarea name="" id="work_space_textarea" placeholder="click here to work with matrices"></textarea>
+      		</div>
+	</div>
+
+	<!-- Keyboard_container -->
+	<div class="keyboard_container">
+		<!--<div class="btn_container">
+			<div class="matrices_container">
+				<div class="g_block"><h4 class="small_titles">Matrices:</h4></div>
+				<a href="" class="matrix_btn_A active">A</a>
+				<span class="btn_plus">+</span>
+			</div>
+		</div>-->
+		<!-- ×  -->
+		<div class="btn_container">
+		<div class="buttons">
+			<div class="btn"><div class="btn_inside dark_btn">det**</div></div>
+			<div class="btn"><div class="btn_inside dark_btn">.</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_7">7</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_8">8</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_9">9</div></div>
+			<div class="btn"><div class="btn_inside dark_btn orange" id="abtn_10"><div class="small-font">⌫</div></div></div>
+			<div class="btn"><div class="btn_inside dark_btn">.</div></div>
+			<div class="btn"><div class="btn_inside dark_btn">.</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_4">4</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_5">5</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_6">6</div></div>
+			<div class="btn"><div class="btn_inside dark_btn orange" id="abtn_13">-</div></div>
+			<div class="btn"><div class="btn_inside dark_btn">.</div></div>
+			<div class="btn"><div class="btn_inside dark_btn">.</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_1">1</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_2">2</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_3">3</div></div>
+			<div class="btn"><div class="btn_inside dark_btn orange" id="btn_14">÷</div></div>
+			<div class="btn"><div class="btn_inside dark_btn orange">.</div></div>
+			<div class="btn"><div class="btn_inside dark_btn orange">.</div></div>
+			<div class="btn"><div class="btn_inside number_btn" id="abtn_0">0</div></div>
+			<div class="btn"><div class="btn_inside dark_btn" id="abtn_12">enter</div></div>
+			<div class="btn"><div class="btn_inside dark_btn" id="abtn_11">space</div></div>
+			<div class="btn"><div class="btn_inside dark_btn copy" id="btn">copy</div></div>
+		</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="new_script.js"></script>
+</body>
+</html>

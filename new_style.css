@@ -1,0 +1,371 @@
+
+:root {
+	--btn-background: rgb(38,38,45);
+	--btn-color: #D7D7D7;
+	--grey-text-color: #919191;
+}
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, 
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, 
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	background: #343540;	/**/
+	color: #fff;
+	font-size: 16px;
+	/*height: 120vh;*/
+	overflow: hidden;
+}
+.container {
+	width: 100%;
+	max-width: 800px;
+	padding: 0 1em;
+	margin: 0 auto;
+}
+
+.btn_container {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.header {
+	padding: 0.5em 0;
+	background: var(--btn-background);
+	/*border-bottom: 1px solid var(--btn-color);*/
+}
+.logotype {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.logo_img {
+	width: 10em;
+}
+
+
+@media (max-width: 600px) {
+	body {
+		font-size: 14px;
+	}
+	.logo_img {
+		/*width: 8em;*/
+	}	
+	.matrix_field textarea {
+		padding-top: 0.3em;
+	}
+}
+
+.keyboard_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	width: 100%;
+	/*height: 35vh;*/
+	position: fixed;
+	bottom: 0;
+}
+.matrices_container {
+	/*border-top: 1px solid var(--btn-background);*/
+	display: flex;
+	padding: 0.25em 0;
+	align-items: center;
+	overflow-x: auto;
+}
+.small_titles {
+	font-size: 1em;
+	font-weight: 400;
+	color: var(--btn-color);
+}
+.btn_plus {
+	/*font-size: 2em;*/
+	margin-left: 0.5em;
+	user-select: none;
+	cursor: pointer;
+}
+
+.buttons {
+	height: 28vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 1px;
+
+	width: 16.66%;;
+	/*margin: 1px;*/
+	background: #343540;
+	overflow: hidden;
+	/*margin: 1px;*/
+
+	/*border-radius: 0.25em;*/
+}
+.btn_inside {
+	width: 100%;
+	height: 100%;
+	background: var(--btn-background);
+	color: var(--btn-color);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/*font-size: 1.5em;*/
+	border-radius: 0.25em;
+
+	user-select: none;
+	cursor: pointer;
+}
+.blue {
+	color: #18aaaa;
+}
+.btn_inside:hover, .dark, .btn_inside:active {
+	/*background-color: rgba(38,38,45, 0.8);*/
+	background-color: #1E1E23!important;
+}
+
+
+.number_btn {
+	font-size: 1.2em;
+}
+.orange {
+	/*color: #FF9800;*/
+	font-size: 1.2em;
+}
+.dark_btn {
+	color: #18aaaa;
+	background: #222228;
+}
+.small-font {
+	font-size: 1em;
+}
+.black {
+	background: #222228;
+}
+.work_space {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 2.5em;
+}
+
+#work_space_textarea {
+	/*padding-top: 0.3em!important;*/
+    resize: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  width: 100%;
+  /*height: 10vh;*/
+  text-align: center;
+  align-items: center;
+  padding: 0.1em;
+  font-family: inherit;
+  /*font-size: 1.2em;*/
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ECECEC;	/*#ECECEC #F5F5F5 #bebebe #c9c9c9*/
+  background-color: #474855;	/*#3F3F4B #3E3F4A #41414E - original #474755*/
+  background-clip: padding-box;
+  border: 1px solid #3E3F4A;
+  border-radius: 0.25rem;	/*(24, 24, 24, 0.2) (41, 41, 41, 0.2)*/
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  /*margin-top: 0.5em;*/
+  border-left: 2px solid #18aaaa;
+  border-right: 2px solid #18aaaa;
+  overflow-y: auto;
+}
+
+
+/*====================================================================*/
+
+
+
+
+.text01 {
+	/*height: 4vh;*/
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*align-items: baseline*/
+}
+
+.xyz {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cross_symbol {
+	color: #919191;	/*color: #919191; #bfbfbf*/
+	display: none;
+	font-size: 2em;
+	font-weight: 500;
+	user-select: none;
+	cursor: pointer;
+	/*transition: color 0.2s ease-in-out;*/
+	transition: 0.2s;
+}
+.cross_symbol:hover, .btn_plus:hover {
+	color: #fff;
+}
+
+.matrix_btn, .matrix_btn_A {
+	/*margin: 0 0.25em 0 0;*/
+	margin: 0 2px;
+	display: flex;
+	text-decoration: none;
+	color: #D7D7D7; /*#D7D7D7 #2D2E36*/
+	background-color: #26262D;
+	transition: 0.2s;
+	border-radius: 0.25rem;
+	border: 1px solid #26262D;
+	cursor: pointer;
+	user-select: none;
+	width: 16.66%;
+}
+
+.matrix_btn {
+	padding: 0.5em 0.5em;
+}
+.matrix_btn_A {
+	padding: 0.5em 1em;
+	justify-content: center;
+}
+
+
+
+.matrix_btn:hover, .matrix_btn_A:hover, .active {
+	color: #18aaaa;	/*#DCDCDC*/
+	border: 1px solid #18aaaa;
+}
+
+/*#141414 - черный #673ab7 - фиолетовый 
+#009688 - зеленый #a93838 - красный 
+#5e88 - зеленый #9693cb - синий 
+#9693cbde - hex синий*/
+
+.btn_field {	
+	width: 320px;
+	/*margin-top: 1em;*/
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	/*padding: 0 0.25em;*/
+}
+
+.matrix_title_1 {
+	font-weight: 500;
+	padding-top: 1em;
+	color: #919191; /*#8399ac - голубой*/
+	text-align: center;
+}
+.matrix_cross {
+	color: white;
+	font-size: 1em;
+	margin-left: 1.2em;
+	border-radius: 50%;
+}
+.matrix_cross:hover {
+	color: #18aaaa;
+}
+
+
+/*  Первый элемент матрицы - textarea */
+.matrix_field textarea {
+	/*width: 200px!important;*/
+	padding-top: 0.2em;
+    resize: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Стили рамки с матрицей  */
+.a_test {
+	/*margin-top: 1em;*/
+	max-width: 100%;
+	height: 40vh;
+	max-height: 400px;
+	resize: none;
+	/*border: 1px solid grey;*/
+	display: flex;
+	justify-content: center;
+
+	/*font-weight: 400;
+    line-height: 1.5;
+    color: #ECECEC;
+    background-color: #474855;
+    background-clip: padding-box;
+    border: 1px solid #3E3F4A;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;*/
+    overflow: auto;
+}
+
+
+
+/* Стили полосы прокрутки */
+.a_test::-webkit-scrollbar, #work_space_textarea::-webkit-scrollbar, .matrices_container::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #343540;
+  border-radius: 0.25em;
+}
+
+.a_test::-webkit-scrollbar-thumb, #work_space_textarea::-webkit-scrollbar-thumb, .matrices_container::-webkit-scrollbar-thumb {
+  border-radius: 200px;
+  /*background-color: #18aaaa;*/
+  background-color: rgba(255, 255, 255, 0.3);
+  /*background: var(--grey-text-color);*/
+  /*background-color: black;*/
+}
+
+.a_test::-webkit-scrollbar-track, #work_space_textarea::-webkit-scrollbar-track, .matrices_container::-webkit-scrollbar-track {
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);*/
+  border-radius: 200px;
+  /*background-color: #f9f9fd;*/
+  background-color: var(--btn-background);
+}
+
+
+/* Стили полосы прокрутки */
+body::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #343540;
+  border-radius: 0.25em;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+  /*background: var(--grey-text-color);*/
+  /*background-color: black;*/
+}
+
+body::-webkit-scrollbar-track {
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);*/
+  border-radius: 200px;
+  /*background-color: #f9f9fd;*/
+  background-color: var(--btn-background);
+}
+
+
+.g_block {
+	width: 16.66%;
+	display: flex;
+	justify-content: center;
+}
