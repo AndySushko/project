@@ -15,6 +15,12 @@
 	<!-- Стили эффектов -->
 	<style type="text/css">
 
+		body, html {
+		  margin: 0;
+		  padding: 0;
+		  height: 100%;
+		}
+
 		:root {
 		  --main-bg-color: #0d0d0d;
 		  --main-txt-color: #b7ab98;
@@ -97,21 +103,21 @@
 		}
 
 		.first-container {
-			background-image: url('img_06.jpg');
+			background-image: url('img/img_06.jpg');
     		background-repeat: no-repeat;
     		background-size: cover;
     		height: 100vh;
 		}
 
 		.second-container {
-			background-image: url('img_03.jpg');
+			background-image: url('img/img_03.jpg');
     		background-repeat: no-repeat;
     		background-size: cover;
     		height: 150vh;
 		}
 
 		.third-container {
-			background-image: url('img_07.jpg');
+			background-image: url('img/img_07.jpg');
     		background-repeat: no-repeat;
     		background-size: cover;
     		height: 100vh;
@@ -126,6 +132,15 @@
 		  	user-select: none;  
 		  	width: 100%;
 		  	border-bottom: 1px solid #2F2B28;
+		}
+		.title-text2 {
+			font-size: 0.5em;
+		  	font-weight: bold;
+		  	letter-spacing: .5em;
+		  	line-height: 100%;
+		  	padding-bottom: 2em;
+		  	user-select: none;  
+		  	width: 100%;
 		}
 
 
@@ -151,7 +166,7 @@
 		}
 
 		.little-text {
-			font-size: 1.75em;
+			font-size: 1.5em;
 			letter-spacing: -.02em;
 			line-height: 110%;
 		}
@@ -183,6 +198,11 @@
 		  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 		}
 
+		/*Ссылки*/
+		.contact_link:hover >.popup_text {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		}
+
 
 		.text2 {
 		  font-weight: bold;
@@ -211,6 +231,14 @@
 
 		.text2:hover > .popup_text {
 		  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+		}
+
+		.text3 {
+			/*background: linear-gradient(to right, var(--main-txt-color), var(--main-txt-color)) 0% 0% / 50.0183% no-repeat text;*/
+			background: linear-gradient(to right, var(--main-txt-color), var(--main-txt-color)) no-repeat; /*var(--main-txt-color)*/
+		  -webkit-background-clip: text;
+		  background-clip: text;
+		  background-size: 0%;
 		}
 
 
@@ -273,15 +301,51 @@
 
 
 		/*parallax*/
+		/*.parallax {
+		  perspective: 1px;
+		  height: 100vh;
+		  overflow-y: auto;
+		}
+		.parallax-layer {
+		  position: absolute;
+		  inset: 0;  вместо top, bottom, left, right: 0;
+		}
+		.parallax-image {
+		  transform: translateZ(0);
+		}
 
+		.parallax-image img {
+			width: 100%;
+		}
 
-
+		.parallax-text {
+		  transform: translateZ(-2px);
+		}*/
+		.parallax-block {
+		  height: 100%;
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+		 
+		#block1 {
+		  background-image: url('img/img_03.jpg');
+		}
+		 
+		#block2 {
+		  background-image: url('img/img_06.jpg');
+		}
+		 
+		#block3 {
+		  background-image: url('img/img_07.jpg');
+		}
 
 
 		/*header*/
 
 		.header {
-			top: 4.25rem;
+			top: 3.75rem;
 			width: 100%;
 			position: fixed;
 			z-index: 9;
@@ -387,6 +451,51 @@
 			font-size: 3em;
 			padding: 0.5em;
 		}
+		.height_90 {
+			height: 80vh;
+		}
+		.color-white {
+			color: #fff;
+		}
+
+		.short {
+			width: auto;
+		}
+
+		.contact_container {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: end;
+		}
+
+		.contact_block {
+			min-width: 400px;
+		}
+
+		.contact_link {
+			color: var(--main-txt-color);
+			font-weight: 600;
+		}
+
+		.contact_link:before {
+    background-image: url(img/ic-contact-link.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    content: "";
+    display: block;
+    height: .75rem;
+    /*left: -.5em;*/
+    left: -20px;
+    position: absolute;
+    top: .3em;
+    width: .75rem;
+}
+
+	.contact {
+		height: 80vh;
+	}
 
 
 	</style>
@@ -396,7 +505,7 @@
 	<!-- Шапка -->
 	<div class="header">
 		<div class="header_logo">
-			<a href="effects.html" class="link-logo"><img src="dozon_logo.png" alt="logo" class="main-logo"></a>
+			<a href="effects.html" class="link-logo"><img src="img/dozon_logo.png" alt="logo" class="main-logo"></a>
 		</div>
 		<div class="header_menu">
 			<ul class="header_menu_list">
@@ -437,46 +546,92 @@
 	    <h2 class="text2">ДИЗАЙНОМ<span class="popup_text">ДИЗАЙНОМ</span></h2>
 	</div>
 
-	<!-- Появляющийся текст -->
+	<!-- О нас -->
 	<div class="popup_container">
-		<h3 class="title-text">О НАС</h3>
-		<h2 class="text little-text">Изначальная идея была</h2>
-	    <h2 class="text little-text">в создании не просто качественного</h2>
-	    <h2 class="text little-text">и доступного ремня для гитары, а аксессуара,</h2>
-	    <h2 class="text little-text">который нес бы в себе некую индивидуальность, эстетику.</h2>
-	    <h2 class="text little-text">Чтобы музыкант имел возможность творчески подойти к аксессуару,</h2>
-	    <h2 class="text little-text">имея возможность дополнить или выделить свой образ.</h2>
+		<h3 class="title-text2">О НАС</h3>
+		<h2 class="text text3 little-text">Мы делаем</h2>
+	    <h2 class="text text3 little-text">ремни для гитар так,</h2>
+	    <h2 class="text text3 little-text">как делали бы их</h2>
+	    <h2 class="text text3 little-text">для себя.</h2>
+	    <br>
+	    <h2 class="text text3 little-text">Ведь все началось</h2>
+	    <h2 class="text text3 little-text">с идеи ребят,</h2>
+	    <h2 class="text text3 little-text">играющих в группе</h2>
+	    <br>
+	    <h2 class="text text3 little-text">Идеи творчески</h2>
+	    <h2 class="text text3 little-text">подойти к аксессуару</h2>
+	    <h2 class="text text3 little-text">и выделить свой образ.</h2>
 	</div>
 
 
-	<!-- Появляющийся текст -->
+	<!-- Качество -->
 	<div class="popup_container first-container">
-		<h2 class="text little-text">Мы тчательно подбирали</h2>
+		<h3 class="title-text2 color-white">КАЧЕСТВО</h3>
+		<h2 class="text little-text">Мы тщательно подбираем</h2>
 	    <h2 class="text little-text">все комплектующие,</h2>
 	    <h2 class="text little-text">чтобы обеспечить</h2>
 	    <h2 class="text little-text">высокое качество</h2>
 	    <h2 class="text little-text">и долговечность ремней</h2>
 	</div>
 
-	<div class="image"><img src="img_02.png" width="100px"></div>
+	<!-- Свой стиль -->
+	<div class="popup_container height_90">
+		<h3 class="title-text2">СВОЙ СТИЛЬ</h3>
+		<h2 class="text text3 little-text">Группы и магазины</h2>
+	    <h2 class="text text3 little-text">могут заказать ремни</h2>
+	    <h2 class="text text3 little-text">с любым логотипом</h2>
+	    <h2 class="text text3 little-text">или названием</h2>
+	</div>
+
+	<!-- <div class="image"><img src="img/img_02.png" width="100px"></div> -->
 
 
-	<!-- Появляющийся текст -->
+	<!-- Наш слоган -->
 	<div class="popup_container second-container">
-		<h3 class="title-text">МЫ ДЕЛАЕМ</h3>
-		<h2 class="text big-text">РЕМНИ<span class="popup_text">DOZON</span></h2>
-	    <h2 class="text big-text">ДЛЯ ГИТАР<span class="popup_text">ДЛЯ ГИТАР</span></h2>
-	    <h2 class="text big-text">С УНИКАЛЬНЫМ<span class="popup_text">С УНИКАЛЬНЫМ</span></h2>
-	    <h2 class="text big-text">ДИЗАЙНОМ<span class="popup_text">ДИЗАЙНОМ</span></h2>
+		<h3 class="title-text color-white">НАШ СЛОГАН</h3>
+		<h2 class="text big-text">ЖИВИ<span class="popup_text">ЖИВИ</span></h2>
+	    <h2 class="text big-text">МУЗЫКОЙ<span class="popup_text">МУЗЫКОЙ</span></h2>
+	    <h2 class="text big-text">С DOZON!<span class="popup_text">С DOZON!</span></h2>
+	</div>
+
+
+	<div class="popup_container">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex officia ut sapiente rerum, doloribus cumque voluptas, nulla enim ratione suscipit quod expedita, atque quae, fuga. Quibusdam quo magni exercitationem suscipit.</p>
 	</div>
 
 
 	<!-- Параллакс -->
-	<div class="wrapper parallax">
+	<!-- <div class="wrapper parallax">
 	  <div class="parallax-layer parallax-image">
-	    <img src="<https://i.pinimg.com/originals/9e/20/fc/9e20fc9ba2e1456ff29caa6780521cb7.jpg>" alt="Сад изящных слов">
+	    <img src="img/img_07.jpg" alt="Сад изящных слов">
 	  </div>
 	  <span class="parallax-layer parallax-text">Сад изящных слов</span>
+	</div> -->
+	<div class="parallax-block" id="block1"></div>
+  <!-- <div class="parallax-block" id="block2"></div> -->
+  <div class="parallax-block" id="block3"></div>
+
+	<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+
+
+	<!-- Связь -->
+	<div class="popup_container contact">
+		<h3 class="title-text2">СВЯЗЬ</h3>
+
+		<div class="contact_container">
+			<div class="contact_block">
+				<a href="" class="contact_link text">Vk<span class="popup_text short">Vk</span></a>
+				<a href="" class="contact_link text">Telegram<span class="popup_text short">Telegram</span></a>
+				<a href="" class="contact_link text">Instagram<span class="popup_text short">Instagram</span></a>
+			</div>
+
+			<div class="contact_block">
+				<a href="tel:+74951234567" class="contact_link text">+7 (495) 123-45-67<span class="popup_text short">+7 (495) 123-45-67</span></a>
+				<a href="mailto:dozonlider@mail.ru" class="contact_link text">dozonlider@mail.ru<span class="popup_text short">dozonlider@mail.ru</span></a>
+			</div>
+		</div>
+
 	</div>
 
 
@@ -503,8 +658,8 @@
 			    ease: 'none',
 			    scrollTrigger: {
 			      trigger: text,
-			      start: 'center 80%',
-			      end: 'center 20%',
+			      start: 'center 100%',
+			      end: 'center 60%',
 			      scrub: true,
 			    },
 			  });
@@ -512,6 +667,17 @@
 		}); //
 
 	</script>
+
+	<!-- <script>
+		window.addEventListener("scroll", function() {
+		  const parallaxBlocks = document.querySelectorAll(".parallax-block");
+		  parallaxBlocks.forEach(function(block) {
+		    const speed = 0.5;
+		    const yPos = window.pageYOffset * speed;
+		    block.style.backgroundPosition = "center " + yPos + "px";
+		  });
+		});
+	</script> -->
 
 </body>
 </html>
