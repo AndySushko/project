@@ -11,6 +11,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<!-- Для карусели -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 	<!-- Стили эффектов -->
 	<style type="text/css">
@@ -35,6 +37,7 @@
 			color: var(--main-txt-color);
 
 			font-size: calc(7.92453px + 1.88679vw);
+			/*font-size: 32px;*/
     		font-weight: 400;
     		line-height: 110%;
 		}
@@ -117,7 +120,7 @@
 		}
 
 		.third-container {
-			background-image: url('img/img_07.jpg');
+			background-image: url('img/img_01.jpg');
     		background-repeat: no-repeat;
     		background-size: cover;
     		height: 100vh;
@@ -288,6 +291,12 @@
 			.popup_container {
 				padding: 0 2em;
 			}
+			.sw-container {
+				margin: 0 2em 3em 1em!important;
+			}
+			.frame-mobile {
+				display: block;
+			}
 		}
 
 		@media screen and (max-width: 450px) {
@@ -338,7 +347,7 @@
 		}
 		 
 		#block3 {
-		  background-image: url('img/img_07.jpg');
+		  background-image: url('img/img_01.jpg');
 		}
 
 
@@ -395,7 +404,7 @@
 
 		.header_menu_item_link__deep {
 		    background: transparent;
-		    color: #D8E3E3; /*#474949; #322E2C*/
+		    color: #fff; /*#474949; #322E2C #D8E3E3;*/
 
 		    /*background-color: black;*/
 		}
@@ -498,6 +507,35 @@
 	}
 
 
+
+
+
+
+	/*стили для слайдера --start*/
+	.sw-container {
+		/*width: 100%;*/
+		/*margin: 0 2em;*/
+		overflow: hidden;
+
+		display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: center;
+    	max-width: 100%;
+    	margin: 0 4em 6em 4em;
+	}
+	.swiper-slide-block {
+		/*text: center;*/
+	}
+	.swiper-slide-block img {
+		/*height: 600px;*/
+		/*width: auto;*/
+		width: 100%;
+		border-radius: 5px;
+	}
+	/*стили для слайдера -- end*/
+
+
 	</style>
 </head>
 <body>
@@ -585,6 +623,46 @@
 
 	<!-- <div class="image"><img src="img/img_02.png" width="100px"></div> -->
 
+	<!-- Слайдер -->
+	<div class="sw-container swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="swiper-slide-block">
+					<img src="img/slider_01.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="swiper-slide-block">
+					<img src="img/slider_02.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="swiper-slide-block">
+					<img src="img/slider_03.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="swiper-slide-block">
+					<img src="img/slider_04.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="swiper-slide-block">
+					<img src="img/slider_05.jpg" alt="">
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="swiper-slide-block">
+					<img src="img/slider_06.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="popup_container">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex officia ut sapiente rerum, doloribus cumque voluptas, nulla enim ratione suscipit quod expedita, atque quae, fuga. Quibusdam quo magni exercitationem suscipit.</p>
+	</div> -->
+
 
 	<!-- Наш слоган -->
 	<div class="popup_container second-container">
@@ -595,10 +673,6 @@
 	</div>
 
 
-	<div class="popup_container">
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex officia ut sapiente rerum, doloribus cumque voluptas, nulla enim ratione suscipit quod expedita, atque quae, fuga. Quibusdam quo magni exercitationem suscipit.</p>
-	</div>
-
 
 	<!-- Параллакс -->
 	<!-- <div class="wrapper parallax">
@@ -607,11 +681,13 @@
 	  </div>
 	  <span class="parallax-layer parallax-text">Сад изящных слов</span>
 	</div> -->
-	<div class="parallax-block" id="block1"></div>
-  <!-- <div class="parallax-block" id="block2"></div> -->
-  <div class="parallax-block" id="block3"></div>
+
+	<!-- <div class="parallax-block" id="block1"></div>
+  <div class="parallax-block" id="block3"></div> -->
 
 	<!-- <br><br><br><br><br><br><br><br><br><br><br><br> -->
+
+
 
 
 
@@ -643,6 +719,7 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
 		// use a script tag or an external JS file
 		document.addEventListener("DOMContentLoaded", (event) => {
@@ -668,16 +745,57 @@
 
 	</script>
 
-	<!-- <script>
-		window.addEventListener("scroll", function() {
-		  const parallaxBlocks = document.querySelectorAll(".parallax-block");
-		  parallaxBlocks.forEach(function(block) {
-		    const speed = 0.5;
-		    const yPos = window.pageYOffset * speed;
-		    block.style.backgroundPosition = "center " + yPos + "px";
-		  });
+	<script>
+		let spaceBetweenElems = 40;
+		if (document.documentElement.clientWidth < 600) {
+				spaceBetweenElems = 15;
+			}
+			else if (document.documentElement.clientWidth < 800) {
+				spaceBetweenElems = 20;
+			}
+			else if (document.documentElement.clientWidth < 1000) {
+				spaceBetweenElems = 30;
+			}
+
+		new Swiper('.swiper-container', {
+			// Точки слайдера
+			// pagination: {
+			// 	el: '.swiper-pagination',
+			// 	clickable: true,
+			// },
+
+			breakpoints: {
+				300: {
+					slidesPerView: 2,
+				},
+				400: {
+					slidesPerView: 3,
+				},
+				650: {
+					slidesPerView: 4,
+				},
+				// 920
+				1000: {
+					slidesPerView: 4,
+				},
+			},
+
+			autoplay: {
+				delay: 2500,
+			},
+
+			speed: 900,
+
+			slideToClickedSlide: true,
+			autoHeight: true,
+			// slidesPerView: 4,
+			loop: true,
+			spaceBetween: spaceBetweenElems,
+
 		});
-	</script> -->
+	</script>
+
+	
 
 </body>
 </html>
