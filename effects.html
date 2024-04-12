@@ -17,6 +17,10 @@
 	<!-- Стили эффектов -->
 	<style type="text/css">
 
+		html {
+		  scroll-behavior: smooth;
+		}
+
 		body, html {
 		  margin: 0;
 		  padding: 0;
@@ -327,14 +331,11 @@
 				font-size: 0.7em;
 			}
 			.first-container {
-				height: 60vh;
+				height: 70vh;
 			}
 		}
 
 		@media screen and (max-width: 450px) {
-			.big-text {
-				font-size: 2.25em;
-			}
 			.title-text {
 				font-size: 0.6em;
 			} 
@@ -596,7 +597,7 @@
 		<div class="header_menu">
 			<ul class="header_menu_list">
 				<li class="header_menu_item is-active">
-					<a href="#about">
+					<a href="#section1">
 						<span class="header_menu_item_inner">
 							<span class="header_menu_item_link__deep">О НАС</span>
 							<span class="header_menu_item_link__active">О НАС</span>
@@ -604,7 +605,7 @@
 					</a>
 				</li>
 				<li class="header_menu_item">
-					<a href="#works">
+					<a href="#section2">
 						<span class="header_menu_item_inner">
 							<span class="header_menu_item_link__deep">РЕМНИ</span>
 							<span class="header_menu_item_link__active">РЕМНИ</span>
@@ -612,7 +613,7 @@
 					</a>
 				</li>
 				<li class="header_menu_item">
-					<a href="#contacts">
+					<a href="#section3">
 						<span class="header_menu_item_inner">
 							<span class="header_menu_item_link__deep">СВЯЗЬ</span>
 							<span class="header_menu_item_link__active">СВЯЗЬ</span> <!-- КОНТАКТЫ -->
@@ -636,7 +637,7 @@
 
 	<!-- О нас -->
 	<div class="popup_container about_us_container">
-		<h3 class="title-text2">О НАС</h3>
+		<h3 class="title-text2" id="section1">О НАС</h3>
 		<h2 class="text text3 little-text">Мы делаем</h2>
 	    <h2 class="text text3 little-text">ремни для гитар так,</h2>
 	    <h2 class="text text3 little-text">как делали бы их</h2>
@@ -663,7 +664,7 @@
 	</div>
 
 	<!-- Свой стиль -->
-	<div class="popup_container style_container">
+	<div class="popup_container style_container" id="section2">
 		<h3 class="title-text2">СВОЙ СТИЛЬ</h3>
 		<h2 class="text text3 little-text">Группы и магазины</h2>
 	    <h2 class="text text3 little-text">могут заказать ремни</h2>
@@ -743,7 +744,7 @@
 
 	<!-- Связь -->
 	<div class="popup_container contact">
-		<h3 class="title-text2">СВЯЗЬ</h3>
+		<h3 class="title-text2" id="section3">СВЯЗЬ</h3>
 
 		<div class="contact_container">
 			<div class="contact_block">
@@ -796,6 +797,7 @@
 	</script>
 
 	<script>
+
 		let spaceBetweenElems = 40;
 		if (document.documentElement.clientWidth < 600) {
 				spaceBetweenElems = 15;
@@ -841,6 +843,7 @@
 
 		});
 	</script>
+
 
 	
 
