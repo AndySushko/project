@@ -40,7 +40,6 @@
 			/*font-size: 32px;*/
     		font-weight: 400;
     		line-height: 110%;
-		overflow-x: hidden;
 		}
 
 		/*Тень по краям экрана*/
@@ -54,7 +53,7 @@
 		    width: 100%;
 		    z-index: 4;
 		}
-		.frame-mobile:before {
+		.frame-mobile:before, .frame-mobile:after {
 		    content: "";
 		    display: block;
 		    left: 0;
@@ -66,7 +65,33 @@
 		    background: linear-gradient(1turn, hsla(0, 0%, 5%, 0), #0c0c0c 92.91%);
 		    height: 12.5rem;
 		    top: 0;
-		} 
+		}
+		.frame-mobile:after {
+		  	/*background: -webkit-gradient(linear, left bottom, left top, color-stop(31.25%, #0c0c0c), color-stop(92.91%, hsla(0, 0%, 5%, 0)));*/
+		    background: linear-gradient(0deg, #0c0c0c 31.25%, hsla(0, 0%, 5%, 0) 92.91%);
+		    bottom: 0;
+		    height: 12.5rem;	/*15.625rem*/
+		}  
+
+		/*Затемнение текста, если он выходит за рамки блока.fade-text {
+		  position: relative;
+		  overflow: hidden;
+		  max-height: 100px;
+		}
+
+		.fade-text:after {
+		  content: '';
+		  position: absolute;
+		  bottom: 0;
+		  width: 100%;
+		  height: 40px;
+		  background: linear-gradient(to bottom, rgba(255,255,255,0), #FFF);
+		}*/
+
+/*		.container {
+			width: 100%;
+			padding: 0 2em;
+		}*/
 
 		.popup_container {
 		  display: flex;
@@ -74,6 +99,7 @@
 		  justify-content: center;
 		  align-items: flex-start;
 		  height: 150vh;
+		  background-position: center center;
 
 		  max-width: 100%;
 
@@ -91,7 +117,7 @@
 			background-image: url('img/img_03.jpg');
     		background-repeat: no-repeat;
     		background-size: cover;
-    		height: 150vh;
+    		height: 100vh;
 		}
 
 		.third-container {
@@ -99,6 +125,10 @@
     		background-repeat: no-repeat;
     		background-size: cover;
     		height: 100vh;
+		}
+
+		.about_us_container {
+			height: 150vh;
 		}
 
 		.title-text {
@@ -243,6 +273,21 @@
 
 
 		/*  Media  */
+		@media screen and (max-width: 1000px) {
+			.about_us_container {
+				height: 100vh;
+			}
+			.style_container {
+			    height: 60vh!important;
+			}
+			.first-container {
+				height: 70vh;
+			}
+			.second-container {
+				height: 80vh;
+			}
+		}
+
 		@media screen and (max-width: 750px) {
 			.big-text {
 				font-size: 2.5em;
@@ -260,17 +305,29 @@
 				right: .75rem!important;
 			}
 			.main-logo {
-			    width: 4em!important;
+			    width: 5em!important;
 			}
 
 			.popup_container {
 				padding: 0 2em;
 			}
 			.sw-container {
-				margin: 0 2em 3em 2em!important;
+				margin: -2em 2em 6em 2em!important;
 			}
 			.frame-mobile {
 				display: block;
+			}
+			.about_us_container {
+				height: 80vh;
+			}
+			.style_container {
+			    height: 50vh!important;
+			}
+			.title-text2 {
+				font-size: 0.7em;
+			}
+			.first-container {
+				height: 60vh;
 			}
 		}
 
@@ -281,6 +338,22 @@
 			.title-text {
 				font-size: 0.6em;
 			} 
+			.little-text {
+				font-size: 1.8em;
+			}
+			.style_container {
+			    height: 45vh!important;
+			}
+			.contact_link {
+				font-size: 1.5em;
+				line-height: 120%;
+			}
+			.contact {
+				padding: 0 3em;
+			}
+			.second-container {
+				height: 70vh;
+			}
 		}
 
 
@@ -435,7 +508,7 @@
 			font-size: 3em;
 			padding: 0.5em;
 		}
-		.height_90 {
+		.style_container {
 			height: 80vh;
 		}
 		.color-white {
@@ -478,7 +551,7 @@
 }
 
 	.contact {
-		height: 80vh;
+		height: 60vh;
 	}
 
 
@@ -497,7 +570,7 @@
     	justify-content: center;
     	align-items: center;
     	max-width: 100%;
-    	margin: 0 4em 6em 4em;
+    	margin: -2em 4em 6em 4em;
 	}
 	.swiper-slide-block {
 		/*text: center;*/
@@ -555,12 +628,14 @@
 	<div class="popup_container third-container">
 		<h2 class="text2">РЕМНИ<span class="popup_text">DOZON</span></h2>
 	    <h2 class="text2">ДЛЯ ГИТАР<span class="popup_text">ДЛЯ ГИТАР</span></h2>
+
+	    <!-- С УНИКАЛЬНЫМ -->
 	    <h2 class="text2">СО СВОИМ<span class="popup_text">СО СВОИМ</span></h2>
 	    <h2 class="text2">ДИЗАЙНОМ<span class="popup_text">ДИЗАЙНОМ</span></h2>
 	</div>
 
 	<!-- О нас -->
-	<div class="popup_container">
+	<div class="popup_container about_us_container">
 		<h3 class="title-text2">О НАС</h3>
 		<h2 class="text text3 little-text">Мы делаем</h2>
 	    <h2 class="text text3 little-text">ремни для гитар так,</h2>
@@ -588,7 +663,7 @@
 	</div>
 
 	<!-- Свой стиль -->
-	<div class="popup_container height_90">
+	<div class="popup_container style_container">
 		<h3 class="title-text2">СВОЙ СТИЛЬ</h3>
 		<h2 class="text text3 little-text">Группы и магазины</h2>
 	    <h2 class="text text3 little-text">могут заказать ремни</h2>
@@ -743,14 +818,11 @@
 				300: {
 					slidesPerView: 2,
 				},
-				400: {
+				600: {
 					slidesPerView: 3,
 				},
-				650: {
-					slidesPerView: 4,
-				},
 				// 920
-				1000: {
+				900: {
 					slidesPerView: 4,
 				},
 			},
